@@ -7,11 +7,11 @@ const classroomSchema = new mongoose.Schema({
     },
     teacher:{
         type: mongoose.Schema.Types.ObjectId,
-        required:true
+        
     },
     students:[{
         type: mongoose.Schema.Types.ObjectId,
-        required:true
+        
     }],
     sessions:[
         {startTime : {
@@ -22,7 +22,7 @@ const classroomSchema = new mongoose.Schema({
             type:String,
             required:true
         },
-        days:{
+        day:{
             type:String,
             required:true
         }}

@@ -2,11 +2,15 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import dotenv from "dotenv"
-
+import authRoute from "./routes/auth.js"
+import classroomRoute from "./routes/classroom.js"
 
 dotenv.config()
 
 const app = express();
+
+app.use("/auth",authRoute)
+app.use("/classroom",classroomRoute)
 
 app.use(express.json())
 app.use(cors())
